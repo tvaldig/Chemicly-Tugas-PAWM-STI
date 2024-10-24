@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stoictic Simulation</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<nav>
+    <a class="logo" href="index.html">
+        <img src="../assets/logo.png" width="40" height="40" alt="Logo">
+    </a>
+    <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <div class="menu-links" id="menuLinks">
+        <a class="links" href="learn.html">Learn</a>
+        <a class="links" href="simulation.html">Simulation</a>
+    </div>
+</nav>
+
+    <main class="simulation-main">
+        <div class="parentbox-simulation">
+            <div class="equationbox">
+                <select name="formula" id="formula">
+                    <option value="" disabled selected>Select Equation</option>
+                    <option value ="water">Make Water</option>
+                    <option value="ammonia">Make Ammonia</option>
+                    <option value="methane">Combust Methane</option>
+                </select>
+                <div id="formulaplaceholder">
+                    Select an equation first.
+                </div>
+            </div>
+            <div class="canvasbox">
+                <div class="canvasboxbox">
+                    <p>Drag Atoms</p>
+                    <canvas id="canvas" width="350" height="150"></canvas>
+                </div>
+                <div class="canvasboxbox">
+                    <p>Before Reaction</p>
+                    <canvas id="canvasleft" width="350" height="150"></canvas>
+                </div>
+                <!-- <img class="arrow" src="../assets/arrow.png" width="50" height="50"> -->
+                <div class="canvasboxbox">
+                    <p>After Reaction</p>
+                    <canvas id="canvasright" width="350" height="150"></canvas>
+                </div>
+                
+            </div>
+            <div class = "buttonsfeat">
+                <button id="reset">
+                </button>
+                <div class = "featparent">
+                    <div id="descinfo">
+                        Reactans
+                        <div class="info">
+                            <div class="infobox">
+                                <div class="imgatom">
+                                    <img class="purple" src="../assets/purple.png" width="30" height="30">
+                                </div>
+                                <div id="purplevalueatom"></div>
+                            </div>
+                            <div class="infobox">
+                                <div class="imgatom">
+                                    <img class="yellow" src="../assets/yellow.png" width="30" height="30">
+                                </div>
+                                <div id="yellowvalueatom"></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="descinfo">
+                        Products & Leftovers
+                        <div class="info">
+                            <div class="infobox">
+                                <div class="imgatom">
+                                    <img class="combined" src="../assets/combined.png" width="40" height="40">
+                                </div>
+                                <div id="productvalueatom"></div>
+                            </div>
+                            <div class="infobox">
+                                <div class="imgatom">
+                                    <img class="purple" src="../assets/purple.png" width="30" height="30">
+                                </div>
+                                <div id="purpleleftover"></div>
+                            </div>
+                            <div class="infobox">
+                                <div class="imgatom">
+                                    <img class="yellow" src="../assets/yellow.png" width="30" height="30">
+                                </div>
+                                <div id="yellowleftover"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>Virtual Lab by Timotius Vivaldi Gunawan</p>
+        <p><a href="mailto:timotiusvivaldi@gmail.com">timotiusvivaldi@gmail.com</a></p>
+        <p>All rights reserved. 2024</p>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+
+</html>
